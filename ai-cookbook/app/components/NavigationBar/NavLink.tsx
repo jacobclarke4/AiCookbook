@@ -6,9 +6,7 @@ interface Props {
 }
 const NavLink = (props : Props) => {
   return (
-    <div>
-        <Link href='#' className='nav-link'>{props.linkTitle}</Link>
-    </div>
+    <Link href='#' className=' flex-center nav-link p mulish-light height-100'>{props.linkTitle}</Link>
   )
 }
 

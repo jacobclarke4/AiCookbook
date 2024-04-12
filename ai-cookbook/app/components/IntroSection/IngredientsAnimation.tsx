@@ -5,9 +5,10 @@ import animationData from '@/public/FoodFloating.json'
 
 const IngredientsAnimation = () => {
   return (
-    <div>
-        <Lottie animationData={animationData}></Lottie>
-    </div>
+    <>
+      <Lottie animationData={animationData}></Lottie>
+    </>
+      
   )
 }
 

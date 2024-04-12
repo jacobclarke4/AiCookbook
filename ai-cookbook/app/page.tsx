@@ -3,14 +3,24 @@ import styles from "./page.module.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import SideBar from "./components/SideBar/SideBar";
 import IntroSection from "./components/IntroSection/IntroSection";
+import InstructionSection from "./components/InstructionSection/InstructionSection";
+import AiForm from "./components/AiForm/AiForm";
 
 export default function Home() {
   return (
-    <main >
-      <NavigationBar/>
-      <div className="margin-auto max-width py-5">
+    <main>
+      <header className="header-width">
+        <NavigationBar/>
+      </header>
+      <section className="margin-auto max-width py-1">
         <IntroSection/>
-      </div>
+      </section>
+      <section className="margin-auto max-width">
+        <InstructionSection/>
+      </section>
+      <section className="margin-auto max-width">
+        <AiForm/>
+      </section>
     </main>
   );
 }

@@ -1,5 +1,48 @@
+:root {
+  --green-color: #8AC926;
+  --red-color: #FF595E;
+  --yellow-color: #FFCA3A;
+  --dark-yellow-color: #eba422;
+  --blue-color: #1982C4;
+  --grey-color: #dbdbdb;
+  font-size: 64px;
+}
+body {
+  margin: 0;
+}
+input:focus {
+  outline: none;
+}
+.logo {
+  height: 1rem;
+}
+.nav-bar {
+  position: relative;
+  height: 100px;
+}
+.anchor {
+  display: inline-block;
+  line-height: 0;
+}
+.search-bar {
+  padding: .1rem;
+  box-sizing: border-box;
+}
+.text-color-white {
+  color: white;
+  
+}
+.text-color-green {
+  color: var(--green-color);
+}
+.margin-none {
+  margin: 0;
+}
 .flex {
   display: flex;
+}
+.flex-1 {
+  flex: 1;
 }
 .flex-center {
   display: flex;
@@ -16,19 +59,40 @@
   justify-content: flex-end;
   align-items: center;
 }
-.gap {
-  gap: 1rem;
+.flex-column {
+  flex-direction: column;
 }
-.p-10 {
-  padding: 0rem 2rem;
+.p-quarter {
+  padding: .25rem;
   box-sizing: border-box;
 }
-.py-5 {
-  padding: 5rem 0rem;
+.p-third {
+  padding: .3rem;
+  box-sizing: border-box;
+}
+.p-half {
+  padding: .5rem;
+  box-sizing: border-box;
+}
+
+.p-1 {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.py-10 {
+  padding: 0rem 1rem;
+  box-sizing: border-box;
+}
+.py-1 {
+  padding: 1rem 0rem;
+  box-sizing: border-box;
 }
 .nav-link {
   color: black;
   text-decoration: none;
+}
+.nav-link:hover {
+  color: var(--green-color);
 }
 .width-100 {
   width: 100%;
@@ -41,10 +105,149 @@
   margin-right: auto;
 }
 .max-width {
-  width: 1200px;
+  max-width: 1200px;
+  padding-left:.5rem;
+  padding-right: .5rem;
+  box-sizing: border-box;
 }
-.grid {
+.grid-col-1 {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
-  gap: 2rem; /* Optional gap between grid items */
+  grid-template-columns: 1fr;
 }
+.grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.grid-item-center {
+  place-items: center;
+}
+.intro-grid-col-2 {
+  display: grid;
+  grid-template-columns: 1fr .75fr;
+}
+.grid-row-height {
+  grid-template-rows: 400px;
+}
+.grid-stagger-1 {
+  display: grid;
+  grid-template-columns: .7fr 1fr;
+}
+.grid-stagger-2 {
+  display: grid;
+  grid-template-columns: 1fr .7fr;
+}
+.gap-third {
+  gap: .3rem;
+}
+.gap-half {
+  gap: .5rem;
+}
+.gap-1 {
+  gap: 1rem;
+}
+.gap-2 {
+  gap: 2rem;
+}
+.btn {
+  border: none;
+  padding: .2rem .5rem;
+}
+.send-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: .1rem;
+  transition: background-color .25s ease;
+}
+.pointer {
+  cursor: pointer;
+}
+.send-svg {
+  width: 1.25em;
+  height: 1.25em;
+}
+.bg-green {
+  background: var(--green-color);
+}
+.bg-red {
+  background: var(--red-color);
+}
+.bg-yellow {
+  background: var(--yellow-color);
+}
+.bg-blue {
+  background: var(--blue-color);
+}
+.bg-white {
+  background: white;
+}
+.bg-dark-yellow {
+  background: var(--dark-yellow-color);
+}
+.bg-grey {
+  background: var(--grey-color);
+}
+.rounded {
+  border-radius: 12px;
+}
+.border-grey {
+  border: solid 2px;
+  border-color: var(--grey-color);
+}
+.border-green {
+  border: solid 2px;
+  border-color: var(--green-color);
+}
+.border-none {
+  border: none;
+}
+.mulish-bold {
+  font-family: "Mulish", sans-serif;
+  font-weight: 700;
+}
+.mulish-reg {
+  font-family: "Mulish", sans-serif;
+  font-weight: 600;
+}
+.mulish-light {
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+}
+.h1 {
+  font-size: 1em;
+  line-height: 1em;
+}
+.h3 {
+  font-size: .33em;
+  line-height: 1em;
+}
+.p {
+  font-size: .25em;
+  line-height: 1em;
+}
+.pos-abs {
+  position: absolute;
+}
+.form-parent:hover {
+  cursor: text
+}
+.header-width {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
+  padding-left:.5rem;
+  padding-right: .5rem;
+  box-sizing: border-box;
+}
+.instruction-image {
+  min-height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.darken {
+  filter: brightness(0.5);
+}
+

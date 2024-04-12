@@ -1,23 +1,22 @@
 import React from 'react'
-import NavLink from '../NavLink'
-import LoginButton from '../LoginButton'
+import LoginButton from './LoginButton'
+import Logo from '../Logo/Logo'
+import NavContainer from './NavContainer'
+import SearchForm from './SearchForm'
 
 const NavigationBar = () => {
-  return (
-    <header>
-      <div className='flex-space gap width-100 height-100'>
-        <div>LOGO</div>
-        <div className='flex-center gap width-100 height-100'>        
-          <NavLink linkTitle='Recipes'/>
-          <NavLink linkTitle='Recipes'/>
-          <NavLink linkTitle='Recipes'/>
-        </div>
-        <div className='flex-end width-100 height-100'>
-          <LoginButton></LoginButton>
-        </div>
 
+  return (
+    <div className='nav-bar flex-space gap-1'>
+      <div className='flex gap-1'>
+        <Logo/>
+        <SearchForm/>
       </div>
-    </header>
+      <div className='flex-end gap-1'>
+        <NavContainer/>
+        <LoginButton/>
+      </div>
+    </div>
   )
 }
 
