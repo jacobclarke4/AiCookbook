@@ -1,7 +1,7 @@
 import React from 'react'
 import LoginButton from './LoginButton'
 import Logo from '../Logo/Logo'
-import NavContainer from './NavContainer'
+import LinkContainer from './LinkContainer'
 import SearchForm from './SearchForm'
 
 const NavigationBar = () => {
@@ -13,7 +13,7 @@ const NavigationBar = () => {
         <SearchForm/>
       </div>
       <div className='flex-end gap-1'>
-        <NavContainer/>
+        <LinkContainer/>
         <LoginButton/>
       </div>
     </div>

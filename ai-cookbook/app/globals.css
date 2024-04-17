@@ -5,6 +5,7 @@
   --dark-yellow-color: #eba422;
   --blue-color: #1982C4;
   --grey-color: #dbdbdb;
+  --light-grey-color: #f1f1f1;
   font-size: 64px;
 }
 body {
@@ -28,6 +29,10 @@ input:focus {
   padding: .1rem;
   box-sizing: border-box;
 }
+.sticky-form {
+  position: sticky;
+  bottom: 0;
+}
 .text-color-white {
   color: white;
   
@@ -43,6 +48,9 @@ input:focus {
 }
 .flex-1 {
   flex: 1;
+}
+.flex-align {
+  align-items: center;
 }
 .flex-center {
   display: flex;
@@ -61,6 +69,10 @@ input:focus {
 }
 .flex-column {
   flex-direction: column;
+}
+.p-tenth {
+  padding: .1rem;
+  box-sizing: border-box;
 }
 .p-quarter {
   padding: .25rem;
@@ -188,8 +200,14 @@ input:focus {
 .bg-grey {
   background: var(--grey-color);
 }
+.bg-light-grey {
+  background: #f1f1f1;
+}
 .rounded {
   border-radius: 12px;
+}
+.all-round {
+  border-radius: 30px;
 }
 .border-grey {
   border: solid 2px;
@@ -215,16 +233,16 @@ input:focus {
   font-weight: 400;
 }
 .h1 {
-  font-size: 1em;
-  line-height: 1em;
+  font-size: 1rem;
+  line-height: 1rem;
 }
 .h3 {
-  font-size: .33em;
-  line-height: 1em;
+  font-size: .33rem;
+
 }
 .p {
-  font-size: .25em;
-  line-height: 1em;
+  font-size: .25rem;
+
 }
 .pos-abs {
   position: absolute;
@@ -250,4 +268,6 @@ input:focus {
 .darken {
   filter: brightness(0.5);
 }
-
+.recipe-output-div {
+  padding-left: 1rem;
+}

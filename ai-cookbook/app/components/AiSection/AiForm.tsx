@@ -1,7 +1,13 @@
 'use client'
 import React, { useRef, useState } from 'react'
 import send from '@/public/send.svg'
-const AiForm = () => {
+
+interface Props {
+  submit: (formData: any) => void;
+  isFormDisabled: boolean;
+}
+
+const AiForm = (props: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
 
   const [userInput, setUserInput] = useState<string>('');
@@ -19,7 +25,7 @@ const AiForm = () => {
   const resetForm = () => {
     setUserInput('');
     setIsInput(false);
-    setIsDisabled(true);
+    setIsDisabled(false);
   }
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -31,37 +37,17 @@ const AiForm = () => {
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (userInput.trim() !== '') 
+    if (userInput.trim() !== '' && !props.isFormDisabled) 
     {
+      props.submit({userInput});
       resetForm();
-      try {
-        const response = await fetch('/api/generate', {            
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({userInput}),
-          
-        });
-        console.log(JSON.stringify({userInput}));
-        if (response.ok) {
-          const data = await response.json();
-          console.log('Form submitted successfully:', data);
-        }
-        else {
-
-          console.error('Failed to submit form:', response.statusText);
-        }
-      }
-      catch (error) {
-        console.error('Error submitting form:', error);
-      }
-      
     }
+    
   };
 
+
   return (
-    <div className='form-parent flex-center p-quarter grid-col-1 gap-third border-grey rounded' onClick={focusInput}>
+    <div className='sticky-form bg-white form-parent flex-center p-quarter grid-col-1 gap-third border-grey rounded' onClick={focusInput}>
         <form onSubmit={handleSubmit} className='flex'>
             <input 
               value={userInput}
@@ -73,7 +59,7 @@ const AiForm = () => {
               type='text' 
               maxLength={200}>
             </input>
-            <button type='submit' className={`send-btn p rounded bg-${isInput && !isDisabled ? 'green':'grey'} ${isDisabled ? '' :'pointer'}`} disabled={isDisabled}> 
+            <button type='submit' className={`send-btn p rounded bg-${isInput && !props.isFormDisabled ? 'green':'grey'} ${props.isFormDisabled ? '':'pointer'}`} disabled={isDisabled}> 
               <img className='send-svg' src={send.src} alt="Send" />
             </button>
         </form>
