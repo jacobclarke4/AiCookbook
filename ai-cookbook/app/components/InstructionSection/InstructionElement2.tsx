@@ -6,6 +6,7 @@ interface Props {
     bgImage?: string;
 }
 const InstructionElement = (props:Props) => {
+    console.log('Background Image:', props.bgImage);
     const divStyle = {
         backgroundImage: props.bgImage ? `url(${props.bgImage})` : 'none',
     };
@@ -17,9 +18,8 @@ const InstructionElement = (props:Props) => {
                 <h3 className='h3 mulish-bold text-color-white margin-none'>{props.heading}</h3>
                 <p className='p mulish-light text-color-white'>{props.description}</p>
             </div>
-            <div className='instruction-image-container bg-white rounded'>
-                <img  className='instruction-image-card' src= {props.bgImage}></img>
-                
+            <div >
+                <div className={`${props.bgColor || ''} rounded instruction-image bg-white`} style={divStyle}></div>
             </div>
         </div>
     </div>

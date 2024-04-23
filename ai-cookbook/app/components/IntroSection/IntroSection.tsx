@@ -1,4 +1,3 @@
-
 import React from 'react'
 import IngredientsAnimation from './IngredientsAnimation'
 import styles from './/introSection.module.css'

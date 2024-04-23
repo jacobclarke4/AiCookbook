@@ -4,10 +4,12 @@ import soup from '@/public/soup.svg'
 import ingredients from '@/public/ingredients.svg'
 import utensils from '@/public/utensils.svg'
 import charcuterie from '@/public/charcuterie.svg'
+import logo from '@/public/logo.png'
 const InstructionSection = () => {
   return (
     <div className='grid-col-1 gap-half'>
         <div className='grid-stagger-1 gap-half'>
+    
             <InstructionElement 
                 heading='Recipe Generator' 
                 description="Quickly discover new recipes and culinary ideas tailored to your prefereneces." 

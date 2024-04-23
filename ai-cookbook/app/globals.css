@@ -59,7 +59,7 @@ input:focus {
 }
 .flex-space {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 }
 .flex-end {
@@ -253,16 +253,18 @@ input:focus {
 .header-width {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
+  max-width: 1400px;
   padding-left:.5rem;
   padding-right: .5rem;
   box-sizing: border-box;
 }
-.instruction-image {
-  min-height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.instruction-image-container {
+  height: 300px;
+}
+.instruction-image-card {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .darken {
@@ -270,4 +272,22 @@ input:focus {
 }
 .recipe-output-div {
   padding-left: 1rem;
+}
+.user-img-container {
+  position: relative;
+  z-index: 1000;
+}
+.user-img {
+  height: 40px;
+  width: 40px;
+}
+
+.user-options-menu {
+  position: absolute;
+  top: 100%;
+  right: 20%;
+}
+
+.shadow {
+  filter: drop-shadow(0px 0px 10px #dbdbdb);
 }
