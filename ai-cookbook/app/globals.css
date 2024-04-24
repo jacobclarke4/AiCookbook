@@ -1,5 +1,6 @@
 :root {
   --green-color: #8AC926;
+  --dark-green-color: #708c00;
   --red-color: #FF595E;
   --yellow-color: #FFCA3A;
   --dark-yellow-color: #eba422;
@@ -163,6 +164,11 @@ input:focus {
 .btn {
   border: none;
   padding: .2rem .5rem;
+  transition: background .25s ease-in-out;
+}
+.btn-hoverable:hover {
+  background: var(--dark-green-color);
+  
 }
 .send-btn {
   display: flex;
@@ -238,11 +244,9 @@ input:focus {
 }
 .h3 {
   font-size: .33rem;
-
 }
 .p {
   font-size: .25rem;
-
 }
 .pos-abs {
   position: absolute;
@@ -287,7 +291,10 @@ input:focus {
   top: 100%;
   right: 20%;
 }
+.underline-none {
+  text-decoration: none;
+}
 
 .shadow {
-  filter: drop-shadow(0px 0px 10px #dbdbdb);
+  filter: drop-shadow(0px 0px 5px #dbdbdb);
 }

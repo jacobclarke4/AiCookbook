@@ -21,7 +21,7 @@ const  LoginButton = () => {
     <>
       {session ? (
         <>
-          <div className='user-img-container ' onMouseEnter={handleMouseEnter}
+          <div className='user-img-container' onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}>
             <img 
               src={session.user?.image as string} 
@@ -33,7 +33,7 @@ const  LoginButton = () => {
                   <p className='p margin-none mulish-reg'>{session.user?.name ? `${session.user.name}`: ''}</p>
                   <p className='p margin-none mulish-reg'>{session.user?.email ? `${session.user.email}`: ''}</p>
                 </div>
-                <button onClick={()=>signOut()} className='btn pointer h3 mulish-bold bg-green rounded text-color-white'>Sign out</button>
+                <button onClick={()=>signOut()} className='btn btn-hoverable pointer h3 mulish-bold bg-green rounded text-color-white'>Sign out</button>
               </div>
             )}
           </div>

@@ -5,12 +5,15 @@ import ingredients from '@/public/ingredients.svg'
 import utensils from '@/public/utensils.svg'
 import charcuterie from '@/public/charcuterie.svg'
 import logo from '@/public/logo.png'
-import InstructionElement1 from './InstructionElement1'
+import RecipeGenerator from './RecipeGenerator'
+import IngredientSubsitution from './IngredientSubsitution'
+
 const InstructionSection1 = () => {
   return (
     <div className='grid-col-1 gap-half'>
         <div className='grid-stagger-1 gap-half'>
-            <InstructionElement1/>
+            <RecipeGenerator/>
+            <IngredientSubsitution/>
         </div>
         <div className='grid-stagger-2 gap-half'>
         </div>

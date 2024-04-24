@@ -35,7 +35,7 @@ const AiSection = () => {
       }
     };
   return (
-    <div className='grid-col-1'>
+    <div id='ai-section' className='grid-col-1'>
         <Output data={InputOutputData || []}/>
         <AiForm submit={handleFormSubmit} isFormDisabled={isFormDisabled}/>
     </div>

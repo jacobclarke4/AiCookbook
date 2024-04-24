@@ -17,13 +17,8 @@ const IntroSection = () => {
             <IngredientsAnimation/>
           </div>
         </div>
-
-      
       </div>
-
-        
     </>
-    
   )
 }
 
