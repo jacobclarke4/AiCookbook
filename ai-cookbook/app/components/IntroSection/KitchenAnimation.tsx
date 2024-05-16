@@ -1,9 +1,10 @@
 "use client"
 import Lottie from 'lottie-react'
 import React, { useEffect, useState } from 'react'
-import animationData from '@/public/FoodFloating.json'
+import animationData from '@/public/kitchen.json'
 
-const IngredientsAnimation = () => {
+
+const KitchenAnimation = () => {
   const [isAnimationLoaded, setIsAnimationLoaded] = useState(false);
 
   return (
@@ -13,4 +14,4 @@ const IngredientsAnimation = () => {
   );
  };
 
-export default IngredientsAnimation
+export default KitchenAnimation

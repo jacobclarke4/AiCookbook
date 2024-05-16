@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavigationBar from "./components/NavigationBar/NavigationBar";
 import SessionWrapper from "./components/SessionWrapper/SessionWrapper";
+import { auth } from "@/auth";
 
 
 
@@ -18,7 +19,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <SessionWrapper>
       <html lang="en">
@@ -37,3 +37,4 @@ export default function RootLayout({
 
   );
 }
+

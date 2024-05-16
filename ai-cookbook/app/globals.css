@@ -2,14 +2,41 @@
   --green-color: #8AC926;
   --dark-green-color: #708c00;
   --red-color: #FF595E;
+  --dark-red-color: #c2595e;
   --yellow-color: #FFCA3A;
   --dark-yellow-color: #eba422;
   --blue-color: #1982C4;
+  --dark-blue-color: #055f96;
   --grey-color: #dbdbdb;
   --light-grey-color: #f1f1f1;
   font-size: 64px;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  
+  background: #bebebe;
+  border-radius: 12px; /* Make the scrollbar thumb round */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--green-color);
+}
 body {
+  overflow-y: scroll;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+header {
   margin: 0;
 }
 input:focus {
@@ -20,7 +47,7 @@ input:focus {
 }
 .nav-bar {
   position: relative;
-  height: 100px;
+  height: 10vh;
 }
 .anchor {
   display: inline-block;
@@ -34,9 +61,11 @@ input:focus {
   position: sticky;
   bottom: 0;
 }
+.center-text {
+  text-align: center;
+}
 .text-color-white {
   color: white;
-  
 }
 .text-color-green {
   color: var(--green-color);
@@ -125,7 +154,6 @@ input:focus {
 }
 .grid-col-1 {
   display: grid;
-  grid-template-columns: 1fr;
 }
 .grid-col-2 {
   display: grid;
@@ -136,7 +164,7 @@ input:focus {
 }
 .intro-grid-col-2 {
   display: grid;
-  grid-template-columns: 1fr .75fr;
+  grid-template-columns: 1fr .7fr;
 }
 .grid-row-height {
   grid-template-rows: 400px;
@@ -154,6 +182,7 @@ input:focus {
 }
 .gap-half {
   gap: .5rem;
+  box-sizing: border-box;
 }
 .gap-1 {
   gap: 1rem;
@@ -188,21 +217,31 @@ input:focus {
 .bg-green {
   background: var(--green-color);
 }
+.bg-dark-green {
+  background: var(--dark-green-color);
+}
 .bg-red {
   background: var(--red-color);
+}
+.bg-dark-red {
+  background: var(--dark-red-color);
 }
 .bg-yellow {
   background: var(--yellow-color);
 }
+.bg-dark-yellow {
+  background: var(--dark-yellow-color);
+}
 .bg-blue {
   background: var(--blue-color);
+}
+.bg-dark-blue {
+  background: var(--dark-blue-color);
 }
 .bg-white {
   background: white;
 }
-.bg-dark-yellow {
-  background: var(--dark-yellow-color);
-}
+
 .bg-grey {
   background: var(--grey-color);
 }
@@ -255,9 +294,8 @@ input:focus {
   cursor: text
 }
 .header-width {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1400px;
+  margin: 0 auto;
+  max-width: 1500px;
   padding-left:.5rem;
   padding-right: .5rem;
   box-sizing: border-box;
@@ -269,6 +307,7 @@ input:focus {
   object-fit: cover;
   height: 100%;
   width: 100%;
+  
 }
 
 .darken {
@@ -297,4 +336,8 @@ input:focus {
 
 .shadow {
   filter: drop-shadow(0px 0px 5px #dbdbdb);
+}
+
+.signin-page {
+  height: 90vh;
 }

@@ -1,8 +1,6 @@
 import IntroSection from "./components/IntroSection/IntroSection";
 import InstructionSection from "./components/InstructionSection/InstructionSection";
 import AiSection from "./components/AiSection/AiSection";
-import SignUpForm from "./components/Authentication/SignUpForm";
-import InstructionSection1 from "./components/InstructionSection/InstructionSection1";
 
 export default function Home() {
 
@@ -17,9 +15,6 @@ export default function Home() {
         </section>
         <section >
           <AiSection/>
-        </section>
-        <section>
-          <SignUpForm/>
         </section>
       </div>
     </main>

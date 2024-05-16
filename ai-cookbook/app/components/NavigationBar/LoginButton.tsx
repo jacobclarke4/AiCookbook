@@ -1,11 +1,19 @@
 'use client'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { signIn, signOut, useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
+import { ClipLoader } from 'react-spinners'
+import { auth } from '@/auth'
 
 const  LoginButton = () => {
-  const {data:session, status} = useSession();
+  const {data:session, status, update} = useSession();
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+  const router = useRouter(); // Initialize useRouter
 
+  console.log("session", session);
+  const user = session?.user;
+
+  console.log("SESSION USER", user);
   const handleMouseEnter = () => {
       setIsMenuVisible(true);
   };
@@ -13,9 +21,9 @@ const  LoginButton = () => {
   const handleMouseLeave = () => {
       setIsMenuVisible(false);
   };
-   // Check if the session status is still loading
+  // Check if the session status is still loading
   if (status === 'loading') {
-    return null; // Or return a loading indicator if you prefer
+    return <ClipLoader color='#8AC926'/>; // Return the spinner while loading
   }
   return (
     <>
@@ -40,7 +48,7 @@ const  LoginButton = () => {
         </>
       ) :
         <div className='flex-end height-100'>
-          <button onClick={()=>signIn()}className='btn pointer h3 mulish-bold bg-green rounded text-color-white'>Sign In</button>
+          <button onClick={()=> router.push('/signin')}className='btn pointer h3 mulish-bold bg-green rounded text-color-white'>Sign In</button>
         </div>
       }
     </>

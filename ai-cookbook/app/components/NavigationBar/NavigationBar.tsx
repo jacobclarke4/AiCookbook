@@ -9,14 +9,16 @@ import SearchForm from './SearchForm'
 const NavigationBar = () => {
 
   return (
-    <div className='nav-bar flex-space gap-1'>
-      <div className='flex-center gap-1'>
-        <Logo/>
-        <LinkContainer/>
-      </div>
-      <div className='flex-center gap-1'>  
-        <SearchForm/>
-        <LoginButton/>
+    <div>
+      <div className='nav-bar flex-space gap-1'>
+        <div className='flex-center gap-1'>
+          <Logo/>
+          <LinkContainer/>
+        </div>
+        <div className='flex-center gap-1'>  
+          <SearchForm/>
+          <LoginButton/>
+        </div>
       </div>
     </div>
   )

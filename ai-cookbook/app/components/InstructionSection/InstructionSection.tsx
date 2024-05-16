@@ -9,32 +9,34 @@ const InstructionSection = () => {
   return (
     <div className='grid-col-1 gap-half'>
         <div className='grid-stagger-1 gap-half'>
-    
             <InstructionElement 
                 heading='Recipe Generator' 
                 description="Quickly discover new recipes and culinary ideas tailored to your prefereneces." 
                 bgColor='bg-green'
+                darkBgColor='bg-dark-green'
                 bgImage= {soup.src}
             />
             <InstructionElement 
                 heading='Ingredient Substitution' 
                 description="Learn alternative ingredients that can be substituted with what's on hand to accommodate your dietary requirements." 
                 bgColor='bg-yellow'
+                darkBgColor='bg-dark-yellow'
                 bgImage= {ingredients.src}
             />
-
         </div>
         <div className='grid-stagger-2 gap-half'>
             <InstructionElement 
                 heading='Cooking Tips' 
                 description="Select the appropriate equipment for any culinary task to achieve the best results." 
                 bgColor='bg-red'
+                darkBgColor='bg-dark-red'
                 bgImage= {utensils.src}
             />
             <InstructionElement 
                 heading='Flavor Pairings' 
                 description="Unlock new and interesting flavor combinations to sartisfy your taste buds." 
                 bgColor='bg-blue'
+                darkBgColor='bg-dark-blue'
                 bgImage= {charcuterie.src}
             />
         </div>

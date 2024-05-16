@@ -47,7 +47,7 @@ const AiForm = (props: Props) => {
 
 
   return (
-    <div className='sticky-form bg-white form-parent flex-center p-quarter grid-col-1 gap-third border-grey rounded' onClick={focusInput}>
+    <div className='sticky-form bg-white form-parent p-quarter grid-col-1 gap-third border-grey rounded' onClick={focusInput}>
         <form onSubmit={handleSubmit} className='flex'>
             <input 
               value={userInput}
